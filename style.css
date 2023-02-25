@@ -1,0 +1,89 @@
+*::before,
+*::after,
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  background-color: #21d4fd;
+  background-image: linear-gradient(
+    48deg,
+    #24c6dc 0%,
+    #514a9d 51%,
+    #24c6dc 100%
+  );
+  background-size: 340%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bg-animation 50s infinite alternate;
+}
+
+.calculator {
+  background-image: linear-gradient(
+    45deg,
+    #16222a 0%,
+    #3a6073 51%,
+    #16222a 100%
+  );
+  border-radius: 10px;
+  background-size: 250%;
+  box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.083);
+  padding: .5rem 1.3rem 1.3rem 1.3rem;
+  animation: bg-animation 25s infinite alternate;
+}
+
+.calculator form input {
+  background-image: linear-gradient(
+    45deg,
+    #16222a 0%,
+    #3a6073 51%,
+    #16222a 100%
+  );
+  background-size: 400%;
+  animation: bg-animation 25s infinite alternate;
+  border-radius: 10px;
+  box-shadow: -8px -8px 15px rgb(255, 255, 255, 0.1),
+    5px 5px 15px rgb(0, 0, 0, 0.2);
+  color: #ffff;
+  cursor: pointer;
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  margin: 0.8rem;
+  width: 4rem;
+  height: 4rem;
+}
+form .display {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 0;
+  border-radius: 5px;
+  padding: 0.5rem 0;
+}
+form .display input {
+  font-size: 2.9rem;
+  flex: 1;
+  text-align: right;
+  padding: 3rem 0.8rem 3rem 0;
+}
+form .operator.equal {
+  width: 10rem;
+}
+form input.operator {
+  color: #33ffd8;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
